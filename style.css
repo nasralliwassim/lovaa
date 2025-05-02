@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background: radial-gradient(circle, #ffb6c1, #e91d83);
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    color: rgba(237, 228, 228, 0.1);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    animation: fadeIn 2s ease-in-out, glow 3s infinite alternate, float 5s ease-in-out infinite;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  }
+  
+  @keyframes glow {
+    from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.05); }
+    to { text-shadow: 0 0 30px rgba(255, 255, 255, 0.25); }
+  }
+  
+  @keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+  }
+  
+  #audio-player {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  #playPauseBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e812b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #playPauseBtn:hover {
+    background-color: #c50a9c;
+  }
+  
